@@ -1,0 +1,40 @@
+title,points,hash,topic,category,icon,image
+Enforce Password History Configured,1,ab48590dedc2a0156bdc3c833bbdf042,Password Policy,Tasks,vpn_key,alpha
+Maximum Password Age Configured,1,2b218e241a670b8e8a51af815d664828,Password Policy,Tasks,vpn_key,alpha
+Minimum Password Age Configured,1,8a736035e6e0ae3e2d3b21f4dc6c20c6,Password Policy,Tasks,vpn_key,alpha
+Minimum Password Length Configured,1,dc6f41de2d4944fcf1e939ee4059762b,Password Policy,Tasks,vpn_key,alpha
+Password Must Meet Complexity Requirements Configured,1,bcf46f872b7984050aaab5764cd270be,Password Policy,Tasks,vpn_key,alpha
+Store Passwords Using Reversible Encryption Configured,1,61459d74e92eb7728bd4eaec3dccee6e,Password Policy,Tasks,vpn_key,alpha
+User Laura's Password Changed,2,0e43a7313d5555b8ea63d5fa05a6debd,Password Policy,Tasks,vpn_key,alpha
+Account Lockout Duration Configured,1,c16757ccf145a0308779a1020365b24b,Account Lockout Policy,Tasks,lock,alpha
+Account Lockout Threshold Configured,1,a7fe5687f564211225b5f9376ad20e7e,Account Lockout Policy,Tasks,lock,alpha
+Reset Account Lockout Counter After Configured,1,776c833b55e38cf8ee2970414f287481,Account Lockout Policy,Tasks,lock,alpha
+Audit Account Management Configured,1,e6a1957f83202c6b0fd3d00125b74db2,Audit Policy,Tasks,view_list,alpha
+Audit Process Tracking Configured,1,c2aa72de80ac2697839e5c356f233c15,Audit Policy,Tasks,view_list,alpha
+Audit Logon Events Configured,2,f076091183e2a22c6b02fcb15ac7e0a8,Audit Policy,Tasks,view_list,alpha
+Shutdown the system Configured,3,3fe5be38aae541af3c521e1e1f806375,User Rights Assignment,Tasks,recent_actors,alpha
+Load and upload device drivers Configured,3,fe198ec2371fc0f43bffb7ec391253c6,User Rights Assignment,Tasks,recent_actors,alpha
+Accounts: Guest account status Disabled,3,bce0c62be93238ecc8e0197cc1ce417e,Security Options,Tasks,verified_user,alpha
+Interactive Logon: Do not display last user name Enabled,3,9956356bd4469d3169aeeee3fff57a41,Security Options,Tasks,verified_user,alpha
+Devices: Restrict CD-ROM access to locally logged-on user only,3,3e8122997d1fbca417e9936ac133e7ac,Security Options,Tasks,verified_user,alpha
+User Derrick removed from Administrator Group,3,5d3392e5c44e7371d8164f41082747a6,Group Policy,Tasks,group_work,alpha
+User Tom removed from Event Log Reader Group,2,f84e0b92ff9ed4375b9f051a9ea652ee,Group Policy,Tasks,group_work,alpha
+Remote Registry is Stopped,5,8ef13de2c89e34a5ef5b5ee0f11beb94,Services,Tasks,settings,alpha
+Windows Firewall is Running,5,9387e98f9a84dfdab3e440a4e1448f2f,Services,Tasks,settings,alpha
+C Drive Share has been Unshared,2,c653bdcbc1ec1d0bf9105cb6c3deee9d,Drive Sharing,Tasks,supervisor_account,alpha
+Derrick Share has been Unshared,2,2d54df90d076cf8af1153abb437fdf7f,Drive Sharing,Tasks,supervisor_account,alpha
+User Derrick has been Disabled,4,ee94fc132d1ab8aa2e2e3479702f753e,Accounts,Tasks,perm_identity,alpha
+Wireshark has been Uninstalled,8,cdbb075d5a5f4b605df647f108c1b478,Installed Programs,Tasks,open_in_new,alpha
+File 'mailing_list_march2016.jpeg' has been deleted,2,5c74fa74c1d69788bdd740c2f945d233,Deleted Files,Tasks,not_interested,alpha
+File 'clearances.rtf' has been deleted,2,d61b586b65ec848de87eb76fce92a6fc,Deleted Files,Tasks,not_interested,alpha
+File 'property_reg.docx' has been deleted,2,b0d5084f05065a2f1a42b58250d0285b,Deleted Files,Tasks,not_interested,alpha
+File 'monthly_potluck.pdf' has been deleted,2,8cf6e14e51d59af85426b26bc446017e,Deleted Files,Tasks,not_interested,alpha
+Don't allow connections to this computer,6,1f6b41796e343e9812f9772da1449c2b,Remote Settings,Tasks,settings_remote,alpha
+Forensic Question 1 Correctly Answered,3,6d9bd74d70aa38245d1b4290c4514cf1,Story,Story,assignment,alpha
+Forensic Question 2 Correctly Answered,4,1fbcd7cd9abe8fff684958e7d0937c26,Story,Story,assignment,alpha
+Forensic Question 3 Correctly Answered,5,411a16c9d825e9f1ee8e4bdf3bf99418,Story,Story,assignment,alpha
+Forensic Question 4 Correctly Answered,6,2e58ffc5aaa900978522e9ccf53e21cb,Story,Story,assignment,alpha
+Story Question 1 Correctly Answered,6,e6e737c6323da78454c075a7337ff175,Story,Story,assignment,alpha
+Story Question 2 Correctly Answered,6,63e6ff8124a9e21a16ca68ac6432b780,Story,Story,assignment,alpha
+Story Question 3 Correctly Answered,7,980b0d98ff61c5262033522e5cd7693d,Story,Story,assignment,alpha
+Story Question 4 Correctly Answered,8,e744639c571f19e23ff003e7d17ab51c,Story,Story,assignment,alpha

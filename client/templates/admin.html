@@ -1,0 +1,138 @@
+<template name="admin">
+{{> navbar}}
+<main>
+<div class="container">
+<div class="pad-content">
+  <div class="row">
+    <h3>Admin Console</h3>
+  </div>
+  <hr class="separating-bar">
+
+  <div id="add-code-modal" class="modal modal-fixed-footer">
+    <form class="col s12">
+    <div class="modal-content">
+      <h4>Add New Registration code</h4>
+      <input type="checkbox" class="filled-in" id="type-code" />
+      <label for="type-code">Check if you will type your own registration code.</label>
+      <div class="input-field">
+        <input type="text" id="add-code" disabled/>
+        <label for="add-code">Registration Code</label>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button id="submit-add-code" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</button>
+      <button id="cancel-add-code" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</button>
+    </div>
+    </form>
+  </div>
+
+  <hr class="separating-bar">
+  <div class="row">
+    <div class="col s6">
+      <h5><i id="show-reg-codes" class="align-icon mouseover-toggle small material-icons">toc</i> Team Registration Codes</h5>
+    </div>
+    <div class="col s6">
+      <button class="btn waves-effect red" id="clear-reg-codes">Clear Codes</button>
+      <button class="btn waves-effect green" id="generate-comp-reg-code">New Code</button>
+
+    </div>
+  </div>
+
+
+  <div class="row" id="registration-code-table" hidden>
+    <div class="center">
+      Click <i class="align-icon small material-icons">toc</i> above to hide registration codes.
+    </div>
+    {{#if noRegistrationCodes}}
+    <div class="center">No Registration Codes. Click "New Code" to generate registration codes.</div>
+
+    {{else}}
+    <table class="striped">
+      <thead>
+        <tr>
+          <th data-field="code">Code</th>
+          <th data-field="status">Status</th>
+          <th data-field="used-by">Claimed By</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each registrationCodes}}
+          <tr>
+            <td>{{code}}</td>
+            <td>{{#if used}}Used{{else}}Available{{/if}}</td>
+            <td>{{#if used}}{{usedBy}}{{/if}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{/if}}
+  </div>
+  <div class="row" id="registration-code-table-neg">
+    <div class="center">
+      Click <i class="align-icon small material-icons">toc</i> above to show registration codes.
+    </div>
+  </div>
+
+  <hr class="separating-bar">
+  <div class="row">
+    <ul class="collapsible popout" data-collapsible="expandable">
+      {{#each image in images}}
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">web</i>
+          Image {{image}}
+        </div>
+        <div class="collapsible-body">
+          {{#each tasksFromImage image}}
+            <ul class="collection with-header">
+              <li class="collection-header"><i class="material-icons circle">{{icon}}</i> {{title}}</li>
+              {{#each allowedFilter this}}
+                <li class="collection-item avatar">
+                  <i class="material-icons circle">perm_identity</i>
+                  <span>{{teamNameFromId this}}</span>
+                </li>
+              {{/each}}
+            </ul>
+          {{/each}}
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="row">
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>Teams</th>
+          <th>Tasks Finished</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each teams}}
+      <tr>
+        <td>{{username}}</td>
+        <td>
+          {{#each tasksFromTeam id}}
+            <i class="material-icons small circle">{{icon}}</i> {{image}} - {{title}}<br>
+          {{/each}}
+        </td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="fixed-action-btn" style="bottom: 115px; right: 24px;">
+    <a class="btn-floating btn-large red" id="scroll-up">
+      <i class="large material-icons">keyboard_arrow_up</i>
+    </a>
+  </div>
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red" id="scroll-down">
+      <i class="large material-icons">keyboard_arrow_down</i>
+    </a>
+  </div>
+  </div>
+</div>
+</main>
+{{> footer}}
+</template>

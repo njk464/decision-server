@@ -1,0 +1,41 @@
+<template name="scoreboard">
+  {{>navbar}}
+  <main>
+    <div class="container">
+      <div class="pad-content">
+        <h3>Leaderboard</h3>
+        <div class="row">
+          {{> scoreGraph}}
+          <table id="scoreboard" class="striped">
+            <thead>
+                <tr>
+                    <td><b>Place</b>
+                    </td>
+                    <td><b>Team</b>
+                    </td>
+                    <td><b>Points</b>
+                    </td>
+                    <td><b>Status</b></td>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each Teams}}
+                <tr><td>{{place}}</td><td>{{name}}</td><td>{{score}} / {{totalScore}}</td><td>
+                {{#if status name}}
+                <i class="small material-icons green-text">verified_user</i>{{else}}
+                <i class="small material-icons red-text">error_outline</i>
+                {{/if}}</td></tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+{{> footer}}
+</template>
+
+<template name="scoreGraph">
+<p hidden>{{numberOfScores}}</p>
+<div id="score-graph"></div>
+</template>

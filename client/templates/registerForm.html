@@ -1,0 +1,43 @@
+<template name="registerForm">
+<body>
+  {{> navbar}}
+  <div class="container">
+    <div class="pad-content">
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <div class="card grey lighten-3">
+            <form id="register-form">
+              <div class="card-content black-text">
+                <span class="card-title">Register Form</span>
+                <div class="input-field">
+                  <input id="registration-code" type="text" class="validate" name="registrationCode" autofocus>
+                  <label for="registration-code">Registration Code</label>
+                </div>
+                <div class="input-field">
+                  <input id="username" type="text" class="validate" name="loginUsername">
+                  <label for="username">Class Name</label>
+                </div>
+                <div class="input-field">
+                  <input id="password" type="password" class="validate" name="loginPassword">
+                  <label for="password">Password</label>
+                </div>
+                <div class="input-field">
+                  <input id="password1" type="password" class="validate" name="loginPassword1">
+                  <label for="password1">Confirm Password</label>
+                </div>
+                <a href="/" class="login">Back to Login</a>
+              </div>
+              <div class="card-action">
+                <div class="input-field">
+                  <button class="btn waves-effect lighten-1" type="submit">Register</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+</body>
+{{> footer}}
+</template>

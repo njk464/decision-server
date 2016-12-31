@@ -1,0 +1,53 @@
+<template name="navbar">
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper {{#if currentUser}}red accent-2{{else}}red accent-2{{/if}}">
+      <div class="row">
+      {{#if currentUser}}
+        {{> userButton}}
+      {{else}}
+        <ul class="right">
+          <li>
+            <a href="{{pathFor route='login'}}" class="waves-effect">Login</a>
+          </li>
+          <li>
+            <a href="{{pathFor route='register'}}" class="waves-effect">Register</a>
+          </li>
+          <li>
+            <a href="{{pathFor route='scoreboard'}}" class="waves-effect">Scoreboard</a>
+          </li>
+        </ul>
+      {{/if}}
+      </div>
+    </div>
+  </nav>
+</div>
+</template>
+
+<template name="userButton">
+<ul class="right hide-on-med-and-down">
+  {{#if isAdmin}}<li><a class="admin-tools waves-effect" href="{{pathFor route='admin'}}">Admin Tools</a></li>{{/if}}
+  <li><a href="{{pathFor route='tasks'}}" class="waves-effect">Tasks</a></li>
+  <li>
+    <a href="{{pathFor route='scoreboard'}}" class="waves-effect">Scoreboard</a>
+  </li>
+  <li>
+    <a href="{{pathFor route='about'}}" class="about waves-effect">About</a>
+  </li>
+  <li><a href="#" class="logout waves-effect">Log out</a></li>
+</ul>
+<ul class="right">
+  <ul id='useroptions' class='dropdown-content'>
+    {{#if isAdmin}}<li><a class="admin-tools waves-effect" href="{{pathFor route='admin'}}">Admin Tools</a></li>{{/if}}
+    <li><a href="{{pathFor route='scoreboard'}}" class="waves-effect">Scoreboard</a></li>
+    <li><a href="{{pathFor route='tasks'}}" class="waves-effect">Tasks</a></li>
+    <li><a href="{{pathFor route='about'}}" class="about waves-effect">About</a></li>
+    <li class="divider"></li>
+    <li><a href="#" class="logout waves-effect">Log out</a></li>
+  </ul>
+  <li>
+    <a class='dropdown-button waves-effect button-collapse' href='#' data-activates='useroptions'>{{ username }}<i class="material-icons right">arrow_drop_down</i>
+    </a>
+  </li>
+</ul>
+</template>

@@ -1,0 +1,355 @@
+{
+  "tasks" :   [
+    {
+      "category" : "Tasks",
+      "hash" : "ab48590dedc2a0156bdc3c833bbdf042",
+      "title" : "Enforce Password History Configured",
+      "image" : "alpha",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "2b218e241a670b8e8a51af815d664828",
+      "title" : "Maximum Password Age Configured",
+      "image" : "alpha",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "8a736035e6e0ae3e2d3b21f4dc6c20c6",
+      "title" : "Minimum Password Age Configured",
+      "image" : "alpha",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "dc6f41de2d4944fcf1e939ee4059762b",
+      "title" : "Minimum Password Length Configured",
+      "image" : "alpha",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "bcf46f872b7984050aaab5764cd270be",
+      "title" : "Password Must Meet Complexity Requirements Configured",
+      "image" : "alpha",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "61459d74e92eb7728bd4eaec3dccee6e",
+      "title" : "Store Passwords Using Reversible Encryption Configured",
+      "image" : "alpha",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "0e43a7313d5555b8ea63d5fa05a6debd",
+      "title" : "User Laura's Password Changed",
+      "image" : "alpha",
+      "topic" : "Password Policy",
+      "points" : 2,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "c16757ccf145a0308779a1020365b24b",
+      "title" : "Account Lockout Duration Configured",
+      "image" : "alpha",
+      "topic" : "Account Lockout Policy",
+      "points" : 1,
+      "icon" : "lock"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "a7fe5687f564211225b5f9376ad20e7e",
+      "title" : "Account Lockout Threshold Configured",
+      "image" : "alpha",
+      "topic" : "Account Lockout Policy",
+      "points" : 1,
+      "icon" : "lock"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "776c833b55e38cf8ee2970414f287481",
+      "title" : "Reset Account Lockout Counter After Configured",
+      "image" : "alpha",
+      "topic" : "Account Lockout Policy",
+      "points" : 1,
+      "icon" : "lock"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "e6a1957f83202c6b0fd3d00125b74db2",
+      "title" : "Audit Account Management Configured",
+      "image" : "alpha",
+      "topic" : "Audit Policy",
+      "points" : 1,
+      "icon" : "view_list"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "c2aa72de80ac2697839e5c356f233c15",
+      "title" : "Audit Process Tracking Configured",
+      "image" : "alpha",
+      "topic" : "Audit Policy",
+      "points" : 1,
+      "icon" : "view_list"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "f076091183e2a22c6b02fcb15ac7e0a8",
+      "title" : "Audit Logon Events Configured",
+      "image" : "alpha",
+      "topic" : "Audit Policy",
+      "points" : 2,
+      "icon" : "view_list"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "3fe5be38aae541af3c521e1e1f806375",
+      "title" : "Shutdown the system Configured",
+      "image" : "alpha",
+      "topic" : "User Rights Assignment",
+      "points" : 3,
+      "icon" : "recent_actors"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "fe198ec2371fc0f43bffb7ec391253c6",
+      "title" : "Load and upload device drivers Configured",
+      "image" : "alpha",
+      "topic" : "User Rights Assignment",
+      "points" : 3,
+      "icon" : "recent_actors"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "bce0c62be93238ecc8e0197cc1ce417e",
+      "title" : "Accounts: Guest account statusDisabled",
+      "image" : "alpha",
+      "topic" : "Security Options",
+      "points" : 3,
+      "icon" : "verified_user"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "9956356bd4469d3169aeeee3fff57a41",
+      "title" : "Interactive Logon: Do not display last user name Enabled",
+      "image" : "alpha",
+      "topic" : "Security Options",
+      "points" : 3,
+      "icon" : "verified_user"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "3e8122997d1fbca417e9936ac133e7ac",
+      "title" : "Devices: Restrict CD-ROM access to locally logged-on user only",
+      "image" : "alpha",
+      "topic" : "Security Options",
+      "points" : 3,
+      "icon" : "verified_user"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "5d3392e5c44e7371d8164f41082747a6",
+      "title" : "User Derrick removed from Administrator Group",
+      "image" : "alpha",
+      "topic" : "Group Policy",
+      "points" : 3,
+      "icon" : "group_work"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "f84e0b92ff9ed4375b9f051a9ea652ee",
+      "title" : "User Tom removed from Event Log Reader Group",
+      "image" : "alpha",
+      "topic" : "Group Policy",
+      "points" : 2,
+      "icon" : "group_work"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "8ef13de2c89e34a5ef5b5ee0f11beb94",
+      "title" : "Remote Registry is Stopped",
+      "image" : "alpha",
+      "topic" : "Services",
+      "points" : 5,
+      "icon" : "settings"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "9387e98f9a84dfdab3e440a4e1448f2f",
+      "title" : "Windows Firewall is Running",
+      "image" : "alpha",
+      "topic" : "Services",
+      "points" : 5,
+      "icon" : "settings"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "c653bdcbc1ec1d0bf9105cb6c3deee9d",
+      "title" : "C Drive Share has been Unshared",
+      "image" : "alpha",
+      "topic" : "Drive Sharing",
+      "points" : 2,
+      "icon" : "supervisor_account"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "2d54df90d076cf8af1153abb437fdf7f",
+      "title" : "Derrick Share has been Unshared",
+      "image" : "alpha",
+      "topic" : "Drive Sharing",
+      "points" : 2,
+      "icon" : "supervisor_account"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "ee94fc132d1ab8aa2e2e3479702f753e",
+      "title" : "User Derrick has been Disabled",
+      "image" : "alpha",
+      "topic" : "Accounts",
+      "points" : 4,
+      "icon" : "perm_identity"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "cdbb075d5a5f4b605df647f108c1b478",
+      "title" : "Wireshark has been Uninstalled",
+      "image" : "alpha",
+      "topic" : "Installed Programs",
+      "points" : 8,
+      "icon" : "open_in_new"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "5c74fa74c1d69788bdd740c2f945d233",
+      "title" : "File 'mailing_list_march2016.jpeg' has been deleted",
+      "image" : "alpha",
+      "topic" : "Deleted Files",
+      "points" : 2,
+      "icon" : "not_interested"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "d61b586b65ec848de87eb76fce92a6fc",
+      "title" : "File 'clearances.rtf' has been deleted",
+      "image" : "alpha",
+      "topic" : "Deleted Files",
+      "points" : 2,
+      "icon" : "not_interested"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "b0d5084f05065a2f1a42b58250d0285b",
+      "title" : "File 'property_reg.docx' has been deleted",
+      "image" : "alpha",
+      "topic" : "Deleted Files",
+      "points" : 2,
+      "icon" : "not_interested"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "8cf6e14e51d59af85426b26bc446017e",
+      "title" : "File 'monthly_potluck.pdf' has been deleted",
+      "image" : "alpha",
+      "topic" : "Deleted Files",
+      "points" : 2,
+      "icon" : "not_interested"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "1f6b41796e343e9812f9772da1449c2b",
+      "title" : "Don't allow connections to this computer",
+      "image" : "alpha",
+      "topic" : "Remote Settings",
+      "points" : 6,
+      "icon" : "settings_remote"
+    },
+    {
+      "category" : "Story",
+      "hash" : "6d9bd74d70aa38245d1b4290c4514cf1",
+      "title" : "Forensic Question 1 Correctly Answered",
+      "image" : "alpha",
+      "topic" : "Story",
+      "points" : 3,
+      "icon" : "assignment"
+    },
+    {
+      "category" : "Story",
+      "hash" : "1fbcd7cd9abe8fff684958e7d0937c26",
+      "title" : "Forensic Question 2 Correctly Answered",
+      "image" : "alpha",
+      "topic" : "Story",
+      "points" : 4,
+      "icon" : "assignment"
+    },
+    {
+      "category" : "Story",
+      "hash" : "411a16c9d825e9f1ee8e4bdf3bf99418",
+      "title" : "Forensic Question 3 Correctly Answered",
+      "image" : "alpha",
+      "topic" : "Story",
+      "points" : 5,
+      "icon" : "assignment"
+    },
+    {
+      "category" : "Story",
+      "hash" : "2e58ffc5aaa900978522e9ccf53e21cb",
+      "title" : "Forensic Question 4 Correctly Answered",
+      "image" : "alpha",
+      "topic" : "Story",
+      "points" : 6,
+      "icon" : "assignment"
+    },
+    {
+      "category" : "Story",
+      "hash" : "e6e737c6323da78454c075a7337ff175",
+      "title" : "Story Question 1 Correctly Answered",
+      "image" : "alpha",
+      "topic" : "Story",
+      "points" : 6,
+      "icon" : "assignment"
+    },
+    {
+      "category" : "Story",
+      "hash" : "63e6ff8124a9e21a16ca68ac6432b780",
+      "title" : "Story Question 2 Correctly Answered",
+      "image" : "alpha",
+      "topic" : "Story",
+      "points" : 6,
+      "icon" : "assignment"
+    },
+    {
+      "category" : "Story",
+      "hash" : "980b0d98ff61c5262033522e5cd7693d",
+      "title" : "Story Question 3 Correctly Answered",
+      "image" : "alpha",
+      "topic" : "Story",
+      "points" : 7,
+      "icon" : "assignment"
+    },
+    {
+      "category" : "Story",
+      "hash" : "e744639c571f19e23ff003e7d17ab51c",
+      "title" : "Story Question 4 Correctly Answered",
+      "image" : "alpha",
+      "topic" : "Story",
+      "points" : 8,
+      "icon" : "assignment"
+    }
+  ]
+}

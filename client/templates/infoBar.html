@@ -1,0 +1,33 @@
+<template name="infoBar">
+<div class="row">
+  <ul class="collection with-header">
+    <li class="collection-header center">{{currentUser.username}}</li>
+    <li class="collection-item center" id="show-code">
+      Mouseover for Access Code
+    </li>
+    <li class="collection-item active red">
+      <div>{{completedTasks}}/{{totalTasks}} Tasks Completed<span class="secondary-content">{{progress}}% Overall Completed</span>
+      </div>
+      <div class="progress">
+        <div class="determinate" style="width: {{progress}}%"></div>
+      </div>
+    </li>
+    <li class="collection-item">
+      <div>
+        {{task_progress}}% Tasks Completed
+        <span class="secondary-content">{{story_progress}}% Story Completed</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<hr>
+{{#unless updatedRecently}}
+  <div class="row center">
+    <i class="warning-icon medium material-icons red-text">warning</i>
+    <span class="warning-text">Your team has not received an update in the past minute. Please check connectivity.
+      <i class="warning-icon medium material-icons red-text">warning</i>
+    </span>
+  </div>
+  <hr>
+{{/unless}}
+</template>

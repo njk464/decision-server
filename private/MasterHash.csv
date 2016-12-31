@@ -1,0 +1,57 @@
+title,points,hash,topic,category,icon,image
+Enforce Password History,1,e4bcbfa375a5c514a441c9ebd5330301,Password Policy,Tasks,vpn_key,training
+Maximum Password Age,1,2ce82f78e2b54108e94e1205eea08aa5,Password Policy,Tasks,vpn_key,training
+Minimum Password Age,1,5f721e6e91f4f7b7e747d94b4815602e,Password Policy,Tasks,vpn_key,training
+Minimum Password Length,1,3ae3e09de0b5aa447462abffdd4e64cf,Password Policy,Tasks,vpn_key,training
+Password Must Meet Complexity Requirements,1,2495caf7b63f7c736421c9b61809cb7d,Password Policy,Tasks,vpn_key,training
+Store Passwords Using Reversible Encryption,1,2bd3cc152bc1d59419f08d81a1baa560,Password Policy,Tasks,vpn_key,training
+User Bad's Password Changed,1,582abf2176c8a9687a7abd903e8358aa,Password Policy,Tasks,vpn_key,training
+Account Lockout Duration,1,2add4716f47d5e8a6ab3434d6072a482,Account Lockout Policy,Tasks,lock,training
+Account Lockout Threshold,1,483a82de5fc64e1234704d95f0e7eee2,Account Lockout Policy,Tasks,lock,training
+Reset Account Lockout Counter After,1,dc9ec212878df06c64359dfbe3d61eec,Account Lockout Policy,Tasks,lock,training
+Audit Logon Events,1,e963c7370cc904035c2ad441859affbf,Audit Policy,Tasks,view_list,training
+Audit Privilege Use,1,44b30c3b51f80e2141b506a033b33c91,Audit Policy,Tasks,view_list,training
+Manage Auditing and Security Log,1,453745221b093f69362951879d04ac84,User Rights Assignment,Tasks,recent_actors,training
+Interactive Logon: Do not require CTRL+ALT+DEL,1,e2c172f7ff8ab1ccc4da984beddd84fd,Security Options,Tasks,verified_user,training
+User Guest removed from Administrators Folder,1,41f0514346c188dc52695da2d948d91c,Group Policy,Tasks,group_work,training
+Remote Registry Stopped,1,fd9ae97747044edec97be140a3ddca76,Services,Tasks,settings,training
+Windows Firewall is Running,1,5aa406b5c60a39b07d939bc178e27adb,Services,Tasks,settings,training
+C Drive has been Unshared,1,8f09ca03137ae02a347f74fb166062a2,Drive Sharing,Tasks,supervisor_account,training
+User Bad has been Disabled,1,4600d2b03d1af1eae4063948528736b4,Accounts,Tasks,perm_identity,training
+Python 2.7.9 has been Uninstalled,1,bfa9c06a50ab668301e86c4690e9ed3e,Installed Programs,Tasks,open_in_new,training
+Hidden file 'Hidden.txt' has been removed,1,be4d5a31c0b1efa0e7d78195f474a2a0,Deleted Files,Tasks,not_interested,training
+Don't allow connections to this computer,1,92fbb50c82d9d6c14a107c9d2dc7fb8f,Remote Settings,Tasks,settings_remote,training
+Forensic Question 1 Correctly Answered,1,9bcdb4ccf848d90fd6c0cc42b399ce0e,Story,Story,assignment,training
+Enforce Password History Configured,1,34fd9d86f53386b275367cb7328ec4c4,Password Policy,Tasks,vpn_key,ABQ Cup
+Maximum Password Age Configured,1,683b751c7c613b6c730bae23c1e9e987,Password Policy,Tasks,vpn_key,ABQ Cup
+Minimum Password Age Configured,1,d276ef54b69968ee86da36b88bde9b87,Password Policy,Tasks,vpn_key,ABQ Cup
+Minimum Password Length Configured,1,c0076582ed224640d5997a3151054351,Password Policy,Tasks,vpn_key,ABQ Cup
+Account Lockout Duration Configured,1,ec2517e5ef18e379ff412c37d24fc771,Account Lockout Policy,Tasks,lock,ABQ Cup
+Account Lockout Threshold Configured,1,cb760536d741bf6317c993c9e6d1c51e,Account Lockout Policy,Tasks,lock,ABQ Cup
+Reset Account Lockout Counter After Configured,1,6a4e7aa9e8eb5739e1d06724df22b1cc,Account Lockout Policy,Tasks,lock,ABQ Cup
+Audit Account Management Configured,1,777e05607e6010a8c8e4d8faedb0c26a,Audit Policy,Tasks,view_list,ABQ Cup
+Audit Logon Events Configured,2,c1417b019e64e124dead22f1d7d961a2,Audit Policy,Tasks,view_list,ABQ Cup
+Shutdown the system Configured,3,fd6b5f11d0425dbec8f8ef2875ede2d9,User Rights Assignment,Tasks,recent_actors,ABQ Cup
+Load and upload device drivers Configured,3,1c5d5608b25d3f7ce90ea5d9d460baa6,User Rights Assignment,Tasks,recent_actors,ABQ Cup
+Accounts: Guest account status Disabled,3,eb067f0df57ff705fe10bb8cd527796d,Security Options,Tasks,verified_user,ABQ Cup
+Interactive Logon: Do not display last user name Enabled,3,0b4b5859dadad88d70a605748fedca86,Security Options,Tasks,verified_user,ABQ Cup
+Shutdown: Clear virtual memory pagefile Enabled ,6,72572adfac0cdc91ca563752979a1925,Security Options,Tasks,verified_user,ABQ Cup
+Interactive Logon: Do not require CTRL+ALT+DEL,4,2608f7d77382d07bdb53945d9c66064f,Security Options,Tasks,verified_user,ABQ Cup
+Invalid users removed from IIS_IUSRS Group,6,87fdf80732d1c1fabc609eed4c7584af,Group Policy,Tasks,group_work,ABQ Cup
+User tbouros removed from Administrator Group,5,2af54b97233ee11be2094978c769217a,Group Policy,Tasks,group_work,ABQ Cup
+SNMP Trap is Stopped,3,537928b39809b9d3e2f8705e17063da9,Services,Tasks,settings,ABQ Cup
+Windows Firewall is Running,3,f1bea53e596f15337b611affd7e59bc9,Services,Tasks,settings,ABQ Cup
+C Drive Share has been Unshared,3,92a429f2f140b847c775d0a409735c6d,Drive Sharing,Tasks,supervisor_account,ABQ Cup
+Nuclear Share has been Unshared,3,04ef7fd2ba008f8a62b6d70ce87cc1ca,Drive Sharing,Tasks,supervisor_account,ABQ Cup
+User gen1Connect has been Disabled,4,ec1785601b1165ec181d67a83c7f1820,Accounts,Tasks,perm_identity,ABQ Cup
+User tbouros has been Disabled,4,294faea807b2e52182ea6ab60781f8e3,Accounts,Tasks,perm_identity,ABQ Cup
+HopperStrike Malware Deleted,13,961d8007afd16b60b73171579c18e4c3,Installed Programs,Tasks,open_in_new,ABQ Cup
+Wireshark has been Uninstalled,8,649147ac2ea648b1ae47e97ee6fe0d1f,Installed Programs,Tasks,open_in_new,ABQ Cup
+File 'gen1_tuxander751_ourotblkasf189.ics' has been deleted,2,826690b7c5a313ccbf73632d3f97a8cb,Deleted Files,Tasks,not_interested,ABQ Cup
+File 'ContactCard.docx' has been deleted,2,ada2561ac8a6bc57540e9eb5a11382b5,Deleted Files,Tasks,not_interested,ABQ Cup
+Don't allow connections to this computer,5,3633d2770a713a7862c1d072467d790d,Remote Settings,Tasks,settings_remote,ABQ Cup
+Forensic Question 1 Correctly Answered,5,3f1775f399d161de26cdd993e2394681,Story,Story,assignment,ABQ Cup
+Forensic Question 2 Correctly Answered,6,9fd8b8471b5ca3edc8c7fd1125ff3aec,Story,Story,assignment,ABQ Cup
+Story Question 1 Correctly Answered,6,f98df8026c86a24ec81aaa840290c25f,Story,Story,assignment,ABQ Cup
+Story Question 2 Correctly Answered,7,c78ffc5f9c6873ba3ecc8a1ed998f0a6,Story,Story,assignment,ABQ Cup
+Story Question 3 Correctly Answered,8,1b4aeab8227a1154ea1715f71c92a7ff,Story,Story,assignment,ABQ Cup

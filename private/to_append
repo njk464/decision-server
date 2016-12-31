@@ -1,0 +1,211 @@
+{
+  "tasks" :   [
+    {
+      "category" : "Tasks",
+      "hash" : "e4bcbfa375a5c514a441c9ebd5330301",
+      "title" : "Enforce Password History",
+      "image" : "training",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "2ce82f78e2b54108e94e1205eea08aa5",
+      "title" : "Maximum Password Age",
+      "image" : "training",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "5f721e6e91f4f7b7e747d94b4815602e",
+      "title" : "Minimum Password Age",
+      "image" : "training",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "3ae3e09de0b5aa447462abffdd4e64cf",
+      "title" : "Minimum Password Length",
+      "image" : "training",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "2495caf7b63f7c736421c9b61809cb7d",
+      "title" : "Password Must Meet Complexity Requirements",
+      "image" : "training",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "2bd3cc152bc1d59419f08d81a1baa560",
+      "title" : "Store Passwords Using Reversible Encryption",
+      "image" : "training",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "582abf2176c8a9687a7abd903e8358aa",
+      "title" : "User Laura's Password Changed",
+      "image" : "training",
+      "topic" : "Password Policy",
+      "points" : 1,
+      "icon" : "vpn_key"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "2add4716f47d5e8a6ab3434d6072a482",
+      "title" : "Account Lockout Duration",
+      "image" : "training",
+      "topic" : "Account Lockout Policy",
+      "points" : 1,
+      "icon" : "lock"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "483a82de5fc64e1234704d95f0e7eee2",
+      "title" : "Account Lockout Threshold",
+      "image" : "training",
+      "topic" : "Account Lockout Policy",
+      "points" : 1,
+      "icon" : "lock"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "dc9ec212878df06c64359dfbe3d61eec",
+      "title" : "Reset Account Lockout Counter After",
+      "image" : "training",
+      "topic" : "Account Lockout Policy",
+      "points" : 1,
+      "icon" : "lock"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "e963c7370cc904035c2ad441859affbf",
+      "title" : "Audit Logon Events",
+      "image" : "training",
+      "topic" : "Audit Policy",
+      "points" : 1,
+      "icon" : "view_list"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "44b30c3b51f80e2141b506a033b33c91",
+      "title" : "Audit Privilege Use",
+      "image" : "training",
+      "topic" : "Audit Policy",
+      "points" : 1,
+      "icon" : "view_list"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "453745221b093f69362951879d04ac84",
+      "title" : "Manage Auditing and Security Log",
+      "image" : "training",
+      "topic" : "User Rights Assignment",
+      "points" : 1,
+      "icon" : "recent_actors"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "e2c172f7ff8ab1ccc4da984beddd84fd",
+      "title" : "Interactive Logon: Do not require CTRL+ALT+DEL",
+      "image" : "training",
+      "topic" : "Security Options",
+      "points" : 1,
+      "icon" : "verified_user"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "41f0514346c188dc52695da2d948d91c",
+      "title" : "User Guest removed from Administrators Folder",
+      "image" : "training",
+      "topic" : "Group Policy",
+      "points" : 1,
+      "icon" : "group_work"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "fd9ae97747044edec97be140a3ddca76",
+      "title" : "Remote Registry Stopped",
+      "image" : "training",
+      "topic" : "Services",
+      "points" : 1,
+      "icon" : "settings"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "5aa406b5c60a39b07d939bc178e27adb",
+      "title" : "Windows Firewall is Running",
+      "image" : "training",
+      "topic" : "Services",
+      "points" : 1,
+      "icon" : "settings"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "8f09ca03137ae02a347f74fb166062a2",
+      "title" : "C Drive has been Unshared",
+      "image" : "training",
+      "topic" : "Drive Sharing",
+      "points" : 1,
+      "icon" : "supervisor_account"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "4600d2b03d1af1eae4063948528736b4",
+      "title" : "User Bad has been Disabled",
+      "image" : "training",
+      "topic" : "Accounts",
+      "points" : 1,
+      "icon" : "perm_identity"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "bfa9c06a50ab668301e86c4690e9ed3e",
+      "title" : "Python 2.7.9 has been Uninstalled",
+      "image" : "training",
+      "topic" : "Installed Programs",
+      "points" : 1,
+      "icon" : "open_in_new"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "be4d5a31c0b1efa0e7d78195f474a2a0",
+      "title" : "Hidden file 'Hidden.txt' has been removed",
+      "image" : "training",
+      "topic" : "Deleted Files",
+      "points" : 1,
+      "icon" : "not_interested"
+    },
+    {
+      "category" : "Tasks",
+      "hash" : "92fbb50c82d9d6c14a107c9d2dc7fb8f",
+      "title" : "Don't allow connections to this computer",
+      "image" : "training",
+      "topic" : "Remote Settings",
+      "points" : 1,
+      "icon" : "settings_remote"
+    },
+    {
+      "category" : "Story",
+      "hash" : "9bcdb4ccf848d90fd6c0cc42b399ce0e",
+      "title" : "Forensic Question 1 Correctly Answered",
+      "image" : "training",
+      "topic" : "Story",
+      "points" : 1,
+      "icon" : "assignment"
+    }
+  ]
+}
