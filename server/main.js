@@ -54,7 +54,7 @@ function setupPub() {
 Meteor.startup(() => {
 
   // Clear databases at startup
-  clearDatabase();  
+  // clearDatabase();  
   setupAdminUser();
   setupTeams();
   setupPub();

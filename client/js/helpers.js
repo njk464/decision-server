@@ -1,8 +1,6 @@
 import { Template } from 'meteor/templating';
 
 import '../templates/main.html';
-import '../templates/scoreboard.html'
-import '../../imports/startup/accounts-config.js';
 
 Template.registerHelper('formatDate', function(date) {
   return moment(date).format('h:mm A, ddd MMM Do, YYYY')
@@ -14,113 +12,6 @@ Template.main.helpers({
   }
 });
 
-Template.tasksList.helpers({
-  'taskTopics': function(image_name) {
-
-    var topicsWithDuplicates = Tasks.find({image: image_name}).fetch();
-    var topicsArray = [];
-
-    for(var i = 0; i < topicsWithDuplicates.length; i++) {
-      topicsArray.push(topicsWithDuplicates[i].topic);
-    }
-
-    return topicsArray.filter(function(elem, index, self) {
-      return index == self.indexOf(elem);
-    });
-
-  },
-  'userTasksFromTopic': function(topic, image_name) {
-    return Tasks.find({topic: topic, image: image_name}, { sort: { createdAt: -1 } }).fetch();
-  },
-  'images': function() {
-    var images = Settings.findOne({'option': 'images'});
-
-    if(!images) {
-      return [];
-    }
-
-    return images.setting;
-  },
-  'completedTasks': function(image_name) {
-
-    return Tasks.find({'image': image_name, 'category': 'Tasks'}).count();
-  },
-  'completedStory': function(image_name) {
-    return Tasks.find({'image': image_name, 'category': 'Story'}).count();
-  },
-  'totalTasks': function(image_name) {
-
-    // TODO: Do for specific image?
-
-    var totalTasksCategorySetting = Settings.findOne({'image': image_name, 'option': 'totalTasksCategory'});
-
-    if(!totalTasksCategorySetting)
-      return;
-
-    return totalTasksCategorySetting.setting;
-  },
-  'totalStory': function(image_name) {
-
-    // TODO: Do for specific image?
-
-    var totalStoryCategorySetting = Settings.findOne({'image': image_name, 'option': 'totalStoryCategory'});
-
-    if(!totalStoryCategorySetting)
-      return;
-
-    return totalStoryCategorySetting.setting;
-  },
-  'progress': function(image_name) {
-    var totalTasks = Settings.findOne({'option': 'totalTasksForImage', 'image': image_name});
-    var tasksForImage = Tasks.find({'image': image_name}).count();
-    if(!totalTasks) {
-      console.log('Invalid total tasks');
-      return;
-    }
-
-    var res = (tasksForImage / totalTasks.setting) * 100.0;
-
-    return res.toFixed(2);
-  }
-});
-
-Template.scoreboard.helpers({
-  'Teams': function() {
-    // fetchs team and score data from the database
-    var scores = Scores.find({}).fetch();
-    // stores a list of team data included score, name, and place
-    teams_list = [];
-    for (var i = 0; i < scores.length; i++){
-      var team = scores[i];
-      teams_list.push({score: team.team_scores[team.team_scores.length - 1].score, name: team.team_username, place: 0});
-    }
-    // sort the teams_list by score
-    teams_list.sort(function(a, b) {
-      return b.score - a.score;
-    });
-    for (var i = 0; i < teams_list.length; i++){
-      teams_list[i].place = i+1;
-    }
-    return teams_list;
-  },
-  'status': function(teamName) {
-    var team = Teams.findOne({"username": teamName});
-
-    if(!team) 
-      return false
-
-    return team.active;
-  },
-  'totalScore': function() {
-    var totalPointsSetting = Settings.findOne({'option': 'totalScore'});
-
-    if(!totalPointsSetting) {
-      return 'total';
-    }
-
-    return totalPointsSetting.setting;
-  }
-});
 Template.admin.helpers({
   current_image: function() {
     var image = Settings.findOne({'option': 'image'});
@@ -164,13 +55,6 @@ Template.admin.helpers({
   teams: function() {
     return Teams.find({});
   },
-  tasksFromTeam(team_id) {
-
-    return Tasks.find({allowed: team_id}, {sort: {image: 1}}).fetch();
-  },
-  tasksFromImage(image) {
-    return Tasks.find({image: image});
-  },
   allowedFilter(task) {
     
     var id = Meteor.user()._id;
@@ -196,14 +80,6 @@ Template.admin.helpers({
   }
 });
 
-Template.task.helpers({
-  'pointsText': function(points) {
-    if(points == 1) {
-      return '1 point';
-    }
-    return points.toString() + ' points';
-  }
-});
 
 Template.loginForm.helpers({
   registrationEnabled: function() {

@@ -12,8 +12,6 @@ Meteor.methods({
       return {success: false, reason: 'Invalid Registration Code'};
     }
 
-    sh.newTeam(username);
-
     console.log('Registered new user: (' + username + ', ' + registrationCode + ')');
 
     return {success: true, reason: 'Success!'};
@@ -39,56 +37,10 @@ Meteor.methods({
 
     RegistrationCodes.remove({usedBy: {$exists: false}});
   },
-  'changeGameState': function(val) {
-    if( !Roles.userIsInRole(this.userId, 'admin') )
-      return;
-
-    Settings.update({option: 'gameRunning'}, {$set: {setting: val}});
-  },
-  'addAnnouncement': function(title, content) {
-    if( !Roles.userIsInRole(this.userId, 'admin') )
-      return;
-
-    var date = new Date().getTime();
-
-    Announcements.insert({title: title, date: date, content: content});
-  },
-  'editAnnouncement': function(id, title, content) {
-    if( !Roles.userIsInRole(this.userId, 'admin') )
-      return;
-
-    if( !Announcements.findOne({_id: id}) )
-      return;
-
-    Announcements.update(id, {$set: {title: title, content: content}});
-  },
-  'deleteAnnouncement': function(id) {
-    if( !Roles.userIsInRole(this.userId, 'admin') )
-      return;
-
-    Announcements.remove({_id: id});
-  },
-  'clearScores': function() {
-    if( !Roles.userIsInRole(this.userId, 'admin') )
-      return;
-
-    Scores.remove({});
-    ScoresArchive.remove({});
-  },
   'clearTeams': function() {
     if( !Roles.userIsInRole(this.userId, 'admin') )
       return;
 
-    Teams.remove({});
-    Meteor.users.remove({ username: { $ne: app_settings.private.admin_login } });
-  },
-  'clearDatabase': function() {
-    if( !Roles.userIsInRole(this.userId, 'admin') )
-      return;
-
-    console.log('this');
-    Scores.remove({});
-    ScoresArchive.remove({});
     Teams.remove({});
     Meteor.users.remove({ username: { $ne: app_settings.private.admin_login } });
   }

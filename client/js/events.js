@@ -1,8 +1,6 @@
 import { Template } from 'meteor/templating';
 
 import '../templates/main.html';
-import '../templates/scoreboard.html'
-import '../../imports/startup/accounts-config.js';
 
 
 Template.userButton.events({
@@ -14,7 +12,6 @@ Template.userButton.events({
 
 Template.loginForm.events({
   'submit #login-form': function(event) {
-    console.log("Login attempt");
     event.preventDefault();
     var username = event.target.loginUsername.value;
     var password = event.target.loginPassword.value;
@@ -55,6 +52,19 @@ Template.registerForm.events({
         Router.go('/');
       }
     });
+  }
+});
+
+Template.main.events({
+  "change .file-upload-input": function(event, template){
+    var file = event.currentTarget.files[0];
+    var r = new FileReader();
+    r.onload = function(e) {
+      var contents = e.target.result;
+      console.log(contents);
+    }
+    r.readAsText(file);
+    // console.log(file);
   }
 });
 
@@ -136,20 +146,5 @@ Template.admin.events({
 
       });
     }
-  }
-});
-
-
-Template.tasksList.events({
-  'click #scroll-up': function(event) {
-    event.preventDefault();
-
-    $("html, body").animate({ scrollTop: 0 }, 450);
-  },
-  'click #scroll-down': function(event) {
-    event.preventDefault();
-    var $target = $('html,body');
-
-    $("html, body").animate({ scrollTop: $target.height() }, 450);
   }
 });

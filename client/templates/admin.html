@@ -6,7 +6,6 @@
   <div class="row">
     <h3>Admin Console</h3>
   </div>
-  <hr class="separating-bar">
 
   <div id="add-code-modal" class="modal modal-fixed-footer">
     <form class="col s12">
@@ -72,66 +71,7 @@
       Click <i class="align-icon small material-icons">toc</i> above to show registration codes.
     </div>
   </div>
-
-  <hr class="separating-bar">
-  <div class="row">
-    <ul class="collapsible popout" data-collapsible="expandable">
-      {{#each image in images}}
-      <li>
-        <div class="collapsible-header">
-          <i class="material-icons">web</i>
-          Image {{image}}
-        </div>
-        <div class="collapsible-body">
-          {{#each tasksFromImage image}}
-            <ul class="collection with-header">
-              <li class="collection-header"><i class="material-icons circle">{{icon}}</i> {{title}}</li>
-              {{#each allowedFilter this}}
-                <li class="collection-item avatar">
-                  <i class="material-icons circle">perm_identity</i>
-                  <span>{{teamNameFromId this}}</span>
-                </li>
-              {{/each}}
-            </ul>
-          {{/each}}
-        </div>
-      </li>
-      {{/each}}
-    </ul>
-  </div>
-  <div class="row">
-    <table class="striped">
-      <thead>
-        <tr>
-          <th>Teams</th>
-          <th>Tasks Finished</th>
-        </tr>
-      </thead>
-      <tbody>
-      {{#each teams}}
-      <tr>
-        <td>{{username}}</td>
-        <td>
-          {{#each tasksFromTeam id}}
-            <i class="material-icons small circle">{{icon}}</i> {{image}} - {{title}}<br>
-          {{/each}}
-        </td>
-      </tr>
-      {{/each}}
-      </tbody>
-    </table>
-  </div>
-  <div class="fixed-action-btn" style="bottom: 115px; right: 24px;">
-    <a class="btn-floating btn-large red" id="scroll-up">
-      <i class="large material-icons">keyboard_arrow_up</i>
-    </a>
-  </div>
-  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large red" id="scroll-down">
-      <i class="large material-icons">keyboard_arrow_down</i>
-    </a>
-  </div>
-  </div>
+</div>
 </div>
 </main>
 {{> footer}}

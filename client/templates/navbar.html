@@ -13,9 +13,6 @@
           <li>
             <a href="{{pathFor route='register'}}" class="waves-effect">Register</a>
           </li>
-          <li>
-            <a href="{{pathFor route='scoreboard'}}" class="waves-effect">Scoreboard</a>
-          </li>
         </ul>
       {{/if}}
       </div>
@@ -27,9 +24,8 @@
 <template name="userButton">
 <ul class="right hide-on-med-and-down">
   {{#if isAdmin}}<li><a class="admin-tools waves-effect" href="{{pathFor route='admin'}}">Admin Tools</a></li>{{/if}}
-  <li><a href="{{pathFor route='tasks'}}" class="waves-effect">Tasks</a></li>
   <li>
-    <a href="{{pathFor route='scoreboard'}}" class="waves-effect">Scoreboard</a>
+    <a href="{{pathFor route='main'}}" class="about waves-effect">Home</a>
   </li>
   <li>
     <a href="{{pathFor route='about'}}" class="about waves-effect">About</a>
@@ -39,8 +35,8 @@
 <ul class="right">
   <ul id='useroptions' class='dropdown-content'>
     {{#if isAdmin}}<li><a class="admin-tools waves-effect" href="{{pathFor route='admin'}}">Admin Tools</a></li>{{/if}}
-    <li><a href="{{pathFor route='scoreboard'}}" class="waves-effect">Scoreboard</a></li>
-    <li><a href="{{pathFor route='tasks'}}" class="waves-effect">Tasks</a></li>
+    <li><a href="{{pathFor route='main'}}" class="about waves-effect">Home</a></li>
+    <li class="divider"></li>
     <li><a href="{{pathFor route='about'}}" class="about waves-effect">About</a></li>
     <li class="divider"></li>
     <li><a href="#" class="logout waves-effect">Log out</a></li>
