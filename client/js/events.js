@@ -55,6 +55,27 @@ Template.registerForm.events({
   }
 });
 
+function add_to_wheel(names) {
+  var url = "http://wheeldecide.com/e.php?";
+  for (var i = 0; i < names.length; i++) {
+    url += "c" + (i+1) + "=" + names[i] + "&";
+  }
+  url += "time=5&remove=1";
+  $('#wheel').attr('src', url);
+}
+
+function processData(csv) {
+  var allTextLines = csv.replace(/"/g,'').split(/\r\n|\n/);
+  var lines = [];
+  for (var i=1; i<allTextLines.length; i++) {
+    var data = allTextLines[i].split(',');
+    var tarr = data[1] + " " + data[0];
+    if (tarr !== undefined && tarr !== "undefined ")
+      lines.push(tarr);
+  }
+  add_to_wheel(lines);
+}
+
 Template.main.events({
   "change .file-upload-input": function(event, template){
     var file = event.currentTarget.files[0];
@@ -62,6 +83,8 @@ Template.main.events({
     r.onload = function(e) {
       var contents = e.target.result;
       console.log(contents);
+      processData(contents
+        );
     }
     r.readAsText(file);
     // console.log(file);
