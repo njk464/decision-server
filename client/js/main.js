@@ -2,25 +2,6 @@ import { Template } from 'meteor/templating';
 
 import '../templates/main.html';
 
-// milliseconds to a readable date
-function time_to_date(time) {
-  var cur_date = new Date(time);
-  // 'yyyy-mm-dd HH:MM:SS.ssssss'
-  var date_string = cur_date.getFullYear();
-  date_string += "-"  + (cur_date.getMonth()+1);
-  date_string += "-" + cur_date.getDate();
-  date_string += " " + cur_date.getHours();
-  if (cur_date.getMinutes() < 10)
-    date_string += ":0" + cur_date.getMinutes();
-  else
-    date_string += ":" + cur_date.getMinutes();
-  if (cur_date.getSeconds() < 10)
-    date_string += ":0" + cur_date.getSeconds();
-  else
-    date_string += ":" + cur_date.getSeconds();
-  return date_string;
-}
-
 Template.userButton.onRendered(function() {
   $('.dropdown-button').dropdown({
     inDuration: 300,
@@ -34,12 +15,8 @@ Template.userButton.onRendered(function() {
 });
 
 Template.main.onRendered(function() {
-  Meteor.subscribe('tasks');
   Meteor.subscribe('teams');
-  Meteor.subscribe('scores');
-  Meteor.subscribe('settings');
   Meteor.subscribe('registrationcodes');
-  Meteor.subscribe('announcements');
 });
 
 Template.loginForm.onRendered(function() {
@@ -47,12 +24,8 @@ Template.loginForm.onRendered(function() {
 });
 
 Template.admin.onRendered(function() {
-  Meteor.subscribe('tasks');
   Meteor.subscribe('teams');
-  Meteor.subscribe('scores');
-  Meteor.subscribe('settings');
   Meteor.subscribe('registrationcodes');
-  Meteor.subscribe('announcements');
   $('select').material_select();
   $('.modal-trigger').leanModal();
   $('.collapsible').collapsible({

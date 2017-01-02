@@ -12,21 +12,18 @@
     <div class="pad-content">
       {{#if currentUser}}
         <div class="row">
-          <div class="col s12">
-            <div class="file-field input-field">
-              <div class="btn">
-                <span>File</span>
-                <input class="file-upload-input" type="file" accept=".csv">
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="Upload your IClicker csv file">
-              </div>
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input class="file-upload-input" type="file" accept=".csv">
             </div>
-            <br/>
-            <div id="dummy" margin-top="100%"></div>
-            <div class="container">
-              <iframe id="wheel" src="http://wheeldecide.com/e.php?c1=uploadAFile&remove=1" width="100%" height="500px" scrolling="no" frameborder="0"></iframe>
-            </div> 
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Upload your IClicker csv file">
+            </div>
+          </div>
+          <div class="col s3"><p class="hidden"></p></div> <!-- used to center the wheel -->
+          <div class="col s6"> 
+              <iframe id="wheel" src="http://wheeldecide.com/e.php?c1=uploadAFile&remove=1" width="100%" height="700px" scrolling="no" frameborder="0"></iframe>
           </div>
         </div>
       {{else}}
