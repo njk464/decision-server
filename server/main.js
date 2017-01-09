@@ -4,7 +4,6 @@ import { Accounts } from 'meteor/accounts-base';
 admin_username = "white";
 admin_password = "R3C01LL@B";
 rh = new RegistrationHandler();
-sh = new ScoreboardHandler();
 
 function setupAdminUser() {
 
@@ -60,9 +59,3 @@ Meteor.startup(() => {
   setupPub();
 
 });
-
-function clearDatabase() {
-  Teams.remove({});
-  RegistrationCodes.remove({});
-  Meteor.users.remove({});
-}
