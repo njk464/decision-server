@@ -1,8 +1,5 @@
 import { Meteor } from 'meteor/meteor';
 
-app_settings = JSON.parse(Assets.getText('settings.json'));
-task_hashes = JSON.parse(Assets.getText('tasks.json'));
-
 Meteor.methods({
   'createNewUser': function(username, password, registrationCode) {
     

@@ -27,14 +27,14 @@ function setupTeams() {
   }
 
   Teams.remove({});
-  Meteor.users.remove({ username: { $ne: app_settings.private.admin_login } });
+  Meteor.users.remove({ username: { $ne: admin_username} });
 
 }
 
 
 function setupPub() {
 
-  var adminLogin = Meteor.users.findOne({username: app_settings.private.admin_login});
+  var adminLogin = Meteor.users.findOne({username: admin_username});
 
   Meteor.publish('registrationcodes', function() {
     if( Roles.userIsInRole(this.userId, 'admin')) {
