@@ -34,11 +34,20 @@ Meteor.methods({
 
     RegistrationCodes.remove({usedBy: {$exists: false}});
   },
-  'clearTeams': function() {
-    if( !Roles.userIsInRole(this.userId, 'admin') )
-      return;
-
-    Teams.remove({});
-    Meteor.users.remove({ username: { $ne: app_settings.private.admin_login } });
+  'generateList': function(list, name, username, def) {
+    var code = slh.generateList(list, name, username, def);
+    if (code == "Name already exists")
+      return {success: false, reason: "Name already exists"};
+    return {success: true, reason: 'Success'};
+  },
+  'clearLists': function() {
+    var username = Meteor.users.findOne({_id: this.userId}).username;
+    StudentLists.remove({owner: username});
+    Settings.remove({owner: username, type: 'default-list'});
+  },
+  'deleteList': function(listName) {
+    var username = Meteor.users.findOne({_id: this.userId}).username;
+    StudentLists.remove({owner: username, name: listName});
+    Settings.remove({owner: username, type: 'default-list', value: listName});
   }
 });

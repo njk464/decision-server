@@ -24,18 +24,17 @@
 <template name="userButton">
 <ul class="right hide-on-med-and-down">
   {{#if isAdmin}}<li><a class="admin-tools waves-effect" href="{{pathFor route='admin'}}">Admin Tools</a></li>{{/if}}
-  <li>
-    <a href="{{pathFor route='main'}}" class="about waves-effect">Home</a>
-  </li>
-  <li>
-    <a href="{{pathFor route='about'}}" class="about waves-effect">About</a>
-  </li>
+  <li><a href="{{pathFor route='main'}}" class="about waves-effect">Home</a></li>
+  <li><a href="{{pathFor route='settings'}}" class="about waves-effect">Settings</a></li>
+  <li><a href="{{pathFor route='about'}}" class="about waves-effect">About</a></li>
   <li><a href="#" class="logout waves-effect">Log out</a></li>
 </ul>
 <ul class="right">
   <ul id='useroptions' class='dropdown-content'>
     {{#if isAdmin}}<li><a class="admin-tools waves-effect" href="{{pathFor route='admin'}}">Admin Tools</a></li>{{/if}}
     <li><a href="{{pathFor route='main'}}" class="about waves-effect">Home</a></li>
+    <li class="divider"></li>
+    <li><a href="{{pathFor route='settings'}}" class="about waves-effect">Settings</a></li>
     <li class="divider"></li>
     <li><a href="{{pathFor route='about'}}" class="about waves-effect">About</a></li>
     <li class="divider"></li>

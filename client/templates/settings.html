@@ -1,0 +1,84 @@
+<template name="settings">
+{{> navbar}}
+<main>
+<div class="container">
+<div class="pad-content">
+  <div class="row">
+    <h3>Wheel Settings</h3>
+  </div>
+
+  <div id="add-list-modal" class="modal modal-fixed-footer">
+    <form class="col s12">
+    <div class="modal-content">
+      <h4>Add New Student List</h4>
+      <div class="input-field">
+        <input type="text" id="list-name"/>
+        <label for="list-name">List Name</label>
+      </div>
+      <div class="input-field">
+        <textarea id="add-list" class="materialize-textarea"></textarea>
+        <label for="add-list">Student List (separate names with commas or new lines)</label>
+      </div>
+      <div class="input-field">
+        <input type="checkbox" class="filled-in" id="list-default" checked="checked" />
+        <label for="list-default">Default list?</label>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button id="submit-add-list" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</button>
+      <button id="cancel-add-list" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</button>
+    </div>
+    </form>
+  </div>
+
+  <hr class="separating-bar">
+  <div class="row">
+    <div class="col s6">
+      <h5><i id="show-lists" class="align-icon mouseover-toggle small material-icons">toc</i> Student Lists</h5>
+    </div>
+    <div class="col s6">
+      <button class="btn waves-effect red" id="clear-lists">Clear lists</button>
+      <button class="btn waves-effect green" id="generate-list">New list</button>
+    </div>
+  </div>
+
+  <div class="row" id="student-list-table" hidden>
+    <div class="center">
+      Click <i class="align-icon small material-icons">toc</i> above to hide the student lists.
+    </div>
+    {{#if noStudentLists}}
+    <div class="center">No student lists. Click "New list" to generate student lists.</div>
+
+    {{else}}
+    <table class="striped">
+      <thead>
+        <tr>
+          <th data-field="name">Name</th>
+          <th data-field="default">Default</th>
+          <th data-field="edit"></th>
+          <th data-field="delete"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each studentLists}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{#if default}}Default{{/if}}</td>
+            <td><button class="btn waves-effect green" name="{{name}}">Edit</button></td>
+            <td><button class="btn waves-effect red delete-list" name="{{name}}">Delete</button></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{/if}}
+  </div>
+  <div class="row" id="student-list-table-neg">
+    <div class="center">
+      Click <i class="align-icon small material-icons">toc</i> above to show the student lists.
+    </div>
+  </div>
+</div>
+</div>
+</main>
+{{> footer}}
+</template>

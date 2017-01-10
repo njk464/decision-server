@@ -1,7 +1,8 @@
 import { Template } from 'meteor/templating';
 
 import '../templates/main.html';
-
+import './wheel.js'
+var wheel = new Wheel();
 
 Template.userButton.events({
   'click .logout': function(event) {
@@ -55,36 +56,13 @@ Template.registerForm.events({
   }
 });
 
-function add_to_wheel(names) {
-  var url = "http://wheeldecide.com/e.php?";
-  for (var i = 0; i < names.length; i++) {
-    url += "c" + (i+1) + "=" + names[i] + "&";
-  }
-  url += "time=5&remove=1";
-  $('#wheel').attr('src', url);
-}
-
-function processData(csv) {
-  var allTextLines = csv.replace(/"/g,'').split(/\r\n|\n/);
-  var lines = [];
-  for (var i=1; i<allTextLines.length; i++) {
-    var data = allTextLines[i].split(',');
-    var tarr = data[1] + " " + data[0];
-    if (tarr !== undefined && tarr !== "undefined ")
-      lines.push(tarr);
-  }
-  add_to_wheel(lines);
-}
-
 Template.main.events({
   "change .file-upload-input": function(event, template){
     var file = event.currentTarget.files[0];
     var r = new FileReader();
     r.onload = function(e) {
       var contents = e.target.result;
-      console.log(contents);
-      processData(contents
-        );
+      wheel.processData(contents);
     }
     r.readAsText(file);
     // console.log(file);
@@ -150,24 +128,54 @@ Template.admin.events({
     $('#registration-code-table').toggle();
     $('#registration-code-table-neg').toggle();
   },
-  'click #scroll-up': function(event) {
-    event.preventDefault();
+});
 
-    $("html, body").animate({ scrollTop: 0 }, 450);
+Template.settings.events({
+  'click #generate-list': function(event) {
+    event.preventDefault();
+    $('#add-list-modal').openModal();
   },
-  'click #scroll-down': function(event) {
+  'click #submit-add-list': function(event) {
     event.preventDefault();
-    var $target = $('html,body');
-
-    $("html, body").animate({ scrollTop: $target.height() }, 450);
+    var list = $('#add-list').val().split(",");
+    var username = Meteor.user().username;
+    var name = $('#list-name').val();
+    var def = $('#list-default').prop('checked');
+    Meteor.call('generateList', list, name, username, def,function(err, res) {
+      if (!res.success){
+        alert(res.reason);
+      }
+      else {
+        $('#student-list-table').show();
+        $('#student-list-table-neg').hide();
+      }
+      $('#add-list').val(''); 
+    });
+    
   },
-  'click #clear-database': function(event) {
+  'click #cancel-add-list': function(event) {
     event.preventDefault();
-    var clear = confirm('Are you sure that you want to clear the database?');
-    if (clear) {
-      Meteor.call('clearDatabase', function(err, res) {
 
+    $('#add-list').val('');
+  },
+  'click #clear-lists': function(event) {
+    event.preventDefault();
+    if (confirm('Are you sure that you want remove all of the lists?')) {
+      Meteor.call('clearLists', function(err, res) {
+        if (err) {console.log(err);}
       });
     }
+  },
+  'click #show-lists': function(event) {
+    event.preventDefault();
+    $('#student-list-table').toggle();
+    $('#student-list-table-neg').toggle();
+  },
+  'click .delete-list': function(event) {
+    event.preventDefault();
+    var listName = this.name;
+    Meteor.call('deleteList', listName, function(err, res) {
+      if (err) {console.log(err)}
+    });
   }
 });

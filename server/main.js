@@ -4,6 +4,7 @@ import { Accounts } from 'meteor/accounts-base';
 admin_username = "white";
 admin_password = "R3C01LL@B";
 rh = new RegistrationHandler();
+slh = new StudentListHandler();
 
 function setupAdminUser() {
 
@@ -33,15 +34,22 @@ function setupTeams() {
 
 
 function setupPub() {
-
-  var adminLogin = Meteor.users.findOne({username: admin_username});
-
   Meteor.publish('registrationcodes', function() {
     if( Roles.userIsInRole(this.userId, 'admin')) {
       return RegistrationCodes.find({});
     } else {
       return this.ready();
     }
+  });
+
+  Meteor.publish('studentlists', function() {
+    var username = Meteor.users.findOne({_id: this.userId}).username;
+    return StudentLists.find({owner: username});
+  });
+
+  Meteor.publish('settings', function() {
+    var username = Meteor.users.findOne({_id: this.userId}).username;
+    return Settings.find({owner: username});
   });
 
   Meteor.publish('teams', function teamsPublication() {

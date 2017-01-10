@@ -1,7 +1,6 @@
 <head>
   <title>Decision Server</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <template name="main">
@@ -22,7 +21,7 @@
           </div>
           <div class="col s3"><p class="hidden"></p></div> <!-- used to center the wheel -->
           <div class="col s6"> 
-              <iframe id="wheel" src="http://wheeldecide.com/e.php?c1=uploadAFile&remove=1" width="100%" height="700px" scrolling="no" frameborder="0"></iframe>
+              <iframe id="wheel" src="{{#if currentUser}}{{wheel_default_url}}{{else}}http://wheeldecide.com/e.php?c1=uploadAFile&remove=1{{/if}}" width="100%" height="700px" scrolling="no" frameborder="0"></iframe>
           </div>
         </div>
     </div>

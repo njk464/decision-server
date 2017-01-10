@@ -17,6 +17,8 @@ Template.userButton.onRendered(function() {
 Template.main.onRendered(function() {
   Meteor.subscribe('teams');
   Meteor.subscribe('registrationcodes');
+  Meteor.subscribe('studentlists');
+  Meteor.subscribe('settings');
 });
 
 Template.loginForm.onRendered(function() {
@@ -26,6 +28,17 @@ Template.loginForm.onRendered(function() {
 Template.admin.onRendered(function() {
   Meteor.subscribe('teams');
   Meteor.subscribe('registrationcodes');
+  $('select').material_select();
+  $('.modal-trigger').leanModal();
+  $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+});
+
+Template.settings.onRendered(function() {
+  Meteor.subscribe('teams');
+  Meteor.subscribe('studentlists');
+  Meteor.subscribe('settings');
   $('select').material_select();
   $('.modal-trigger').leanModal();
   $('.collapsible').collapsible({
