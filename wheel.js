@@ -3,7 +3,7 @@ Wheel = function() {
 };
 
 function add_to_wheel(names) {
-  var url = "http://wheeldecide.com/e.php?";
+  var url = "https://wheeldecide.com/e.php?";
   for (var i = 0; i < names.length; i++) {
     url += "c" + (i+1) + "=" + names[i] + "&";
   }
@@ -27,8 +27,16 @@ Wheel.prototype.processData = function(csv) {
   add_to_wheel(lines);
 }
 
+Wheel.prototype.resize = function() {
+  var width = $('#wheel').width();
+  $('#wheel').height(width);
+  var iframe = document.getElementById('wheel');
+  iframe.src = iframe.src;
+}
+
+var wheel = new Wheel();
+
 $( document ).ready(function() {
-  var wheel = new Wheel();
   $(".file-upload-input").change(function(event) {
     var file = event.currentTarget.files[0];
     var r = new FileReader();
@@ -38,4 +46,9 @@ $( document ).ready(function() {
     }
     r.readAsText(file);
   });
+  wheel.resize();
+});
+
+$( window ).resize(function() {
+  wheel.resize();
 });
