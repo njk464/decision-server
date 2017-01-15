@@ -3,7 +3,7 @@ Wheel = function() {
 };
 
 function add_to_wheel(names) {
-  var url = "http://wheeldecide.com/e.php?";
+  var url = "https://wheeldecide.com/e.php?";
   for (var i = 0; i < names.length; i++) {
     url += "c" + (i+1) + "=" + names[i] + "&";
   }
