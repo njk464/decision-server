@@ -21,9 +21,10 @@ Wheel.prototype.processData = function(csv) {
   for (var i=1; i<allTextLines.length; i++) {
     var data = allTextLines[i].split(',');
     var tarr = data[1] + " " + data[0];
-    if (tarr !== undefined && tarr !== "undefined ")
+    if (tarr !== undefined && tarr !== "undefined " && !tarr.includes('#'))
       lines.push(tarr);
   }
+  console.log(lines);
   add_to_wheel(lines);
 }
 
