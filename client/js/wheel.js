@@ -24,5 +24,5 @@ Wheel.prototype.processData = function(csv) {
     if (tarr !== undefined && tarr !== "undefined ")
       lines.push(tarr);
   }
-  add_to_wheel(lines);
+  return lines;
 }

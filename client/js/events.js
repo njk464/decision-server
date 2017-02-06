@@ -62,10 +62,10 @@ Template.main.events({
     var r = new FileReader();
     r.onload = function(e) {
       var contents = e.target.result;
-      wheel.processData(contents);
+      var names = wheel.processData(contents);
+      wheel.add_to_wheel(names);
     }
     r.readAsText(file);
-    // console.log(file);
   }
 });
 
@@ -137,20 +137,26 @@ Template.settings.events({
   },
   'click #submit-add-list': function(event) {
     event.preventDefault();
-    var list = $('#add-list').val().split(",");
+    var name_list = $('#add-list').val();
+    var list = name_list.split(",");
     var username = Meteor.user().username;
     var name = $('#list-name').val();
     var def = $('#list-default').prop('checked');
-    Meteor.call('generateList', list, name, username, def,function(err, res) {
-      if (!res.success){
-        alert(res.reason);
-      }
-      else {
-        $('#student-list-table').show();
-        $('#student-list-table-neg').hide();
-      }
-      $('#add-list').val(''); 
-    });
+    if (name.trim() != "" && name_list.trim() != "") {
+      Meteor.call('generateList', list, name, username, def,function(err, res) {
+        if (!res.success){
+          alert(res.reason);
+        }
+        else {
+          $('#student-list-table').show();
+          $('#student-list-table-neg').hide();
+        }
+        $('#add-list').val(''); 
+      });
+    }
+    else{
+      alert('Must fill out all fields.');
+    }
     
   },
   'click #cancel-add-list': function(event) {
@@ -177,5 +183,20 @@ Template.settings.events({
     Meteor.call('deleteList', listName, function(err, res) {
       if (err) {console.log(err)}
     });
+  },
+  'change .file-upload-input': function(event, template){
+    var file = event.currentTarget.files[0];
+    var r = new FileReader();
+    r.onload = function(e) {
+      var contents = e.target.result;
+      var names = wheel.processData(contents);
+      var names_string = "";
+      for (var i = 0; i < names.length - 1; i += 1) {
+        names_string += names[i] + ", ";
+      }
+      names_string += names[i];
+      $('#add-list').val(names_string);
+    }
+    r.readAsText(file);
   }
 });

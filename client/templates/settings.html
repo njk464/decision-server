@@ -15,6 +15,16 @@
         <input type="text" id="list-name"/>
         <label for="list-name">List Name</label>
       </div>
+      <p> Enter names manually or upload a csv file </p>
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input class="file-upload-input" type="file" accept=".csv">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Upload your IClicker csv file">
+        </div>
+      </div>
       <div class="input-field">
         <textarea id="add-list" class="materialize-textarea"></textarea>
         <label for="add-list">Student List (separate names with commas or new lines)</label>
@@ -55,7 +65,6 @@
         <tr>
           <th data-field="name">Name</th>
           <th data-field="default">Default</th>
-          <th data-field="edit"></th>
           <th data-field="delete"></th>
         </tr>
       </thead>
@@ -64,7 +73,6 @@
           <tr>
             <td>{{name}}</td>
             <td>{{#if default}}Default{{/if}}</td>
-            <td><button class="btn waves-effect green" name="{{name}}">Edit</button></td>
             <td><button class="btn waves-effect red delete-list" name="{{name}}">Delete</button></td>
           </tr>
         {{/each}}
